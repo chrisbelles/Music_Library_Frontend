@@ -1,5 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import AddSong from './components/AddSong';
+
+const styles = {
+  button:  {
+    float: 'right',
+    background: 'black',
+    color: 'white',
+    padding: '10px 60px',
+    margin: '10px 0px',
+  }
+}
 
 function App() {
 
@@ -18,8 +29,12 @@ function App() {
 
   return (
     <div>
-      
-      <button onClick={() => getAllSongs()}>Get All Songs</button>
+      <header style={{background: "green",height: '6rem'}}>
+        <h1>Music Library</h1>
+      </header>
+      <label>Click here to see all songs!</label>
+      <button  className={(styles.button)} onClick={() => getAllSongs()}>Get All Songs</button>
+      <AddSong />
     </div>
   );
 }
