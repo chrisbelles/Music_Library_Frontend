@@ -2,15 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import AddSong from './components/AddSong';
 
-const styles = {
-  button:  {
-    float: 'right',
-    background: 'black',
-    color: 'white',
-    padding: '10px 60px',
-    margin: '10px 0px',
-  }
-}
 
 function App() {
 
@@ -29,12 +20,35 @@ function App() {
 
   return (
     <div>
-      <header style={{background: "green",height: '6rem'}}>
-        <h1>Music Library</h1>
+      <header style={{background: "gray",height: '5rem',padding: '2px'}}>
+        <h1 style={{marginLeft: '40%'}}>Music Library</h1>
       </header>
-      <label>Click here to see all songs!</label>
-      <button  className={(styles.button)} onClick={() => getAllSongs()}>Get All Songs</button>
+      <br></br>
+      <br></br>
       <AddSong />
+      <br></br>
+      <br></br>
+      <label style={{marginLeft: '40%', padding:'3rem'}}>Click here to see all songs!</label>
+      <button style={{}} onClick={() => getAllSongs()}>Get All Songs</button>
+      <br></br>
+      <br></br>
+      <div>
+        <table style={{}}>
+          <thead>
+            <tr>
+              <th style={{padding: '4rem'}}>ID</th>
+              <th style={{padding: '4rem'}}>Title</th>
+              <th style={{padding: '4rem'}}>Artist</th>
+              <th style={{padding: '4rem'}}>Album</th>
+              <th style={{padding: '4rem'}}>Release Date</th>
+              <th style={{padding: '4rem'}}>Genre</th>
+            </tr>
+          </thead>
+          <tbody>
+            {setSongs}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

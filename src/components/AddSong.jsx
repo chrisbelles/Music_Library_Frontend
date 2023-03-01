@@ -5,24 +5,24 @@ const styles = {
         float: 'left'
     },
     titleInput: {
-        marginLeft : '10%',
-        width : '60%'
+        marginLeft : '5.45rem',
+        width : '30%'
     },
     artistInput: {
-        marginLeft : '10%',
-        width : '60%',
+        marginLeft : '5rem',
+        width : '30%',
     },
     albumInput: {
-        marginLeft : '10%',
-        width : '60%'
+        marginLeft : '4.5rem',
+        width : '30%'
     },
     releaseDateInput: {
-        marginLeft : '10%',
-        width : '60%',
+        marginLeft : '2.05rem',
+        width : '30%',
     },
     genreInput: {
-        marginLeft : '10%',
-        width : '60%'
+        marginLeft : '4.85rem',
+        width : '30%'
 },
 
 }
@@ -45,12 +45,12 @@ const AddSong = (props) => {
             genre: genre
         };
         console.log(newEntry)
-        props.addNewEntry(newEntry)
+        props.addSong(newEntry)
     }
 
     return ( 
         <form onSubmit={handleSubmit} className='form-grid' style={{}}>
-            <div className='form-group' style={{padding: '2%'}}>
+            <div className='form-group' style={{}}>
                 <label className="text-muted" style={styles.label}>Title :</label>
                 <input type='title' className="form-control" style={styles.titleInput} value={title}onChange={(event) => setTitle(event.target.value)}/>
                 <br></br>
