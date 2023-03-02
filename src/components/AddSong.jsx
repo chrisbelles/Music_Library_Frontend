@@ -57,6 +57,7 @@ const AddSong = (props) => {
         props.addSong(newEntry)
           .then(() => {
             window.alert('Song added successfully!');
+
           })
           .catch((error) => {
             console.log(error);

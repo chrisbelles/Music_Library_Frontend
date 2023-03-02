@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 
+const styles = {
+
+  searchInput: {
+      marginLeft : '5.45rem',
+      width : '30%'
+  }
+};
+
 function SearchSongs({ searchSongs }) {
   const [query, setQuery] = useState('');
 
@@ -16,7 +24,7 @@ function SearchSongs({ searchSongs }) {
     <form onSubmit={handleSubmit}>
       <label>
         Search:
-        <input type="text" placeholder="Search Music Library" value={query} onChange={handleInputChange} />
+        <input type="text" style={(styles.searchInput)} placeholder="Search Library by Title, Artist, Album, Release Date, or Genre" value={query} onChange={handleInputChange} />
       </label>
       <button type="submit">Search</button>
     </form>
