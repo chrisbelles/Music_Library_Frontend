@@ -77,7 +77,7 @@ const AddSong = (props) => {
                 <input type='album' className="form-control" style={styles.albumInput} placeholder="Enter album here." value={album}onChange={(event) => setAlbum(event.target.value)}/>
                 <br></br>
                 <label className="text-muted" style={styles.label}>Release Date :</label>
-                <input type='release_date' className="form-control" style={styles.releaseDateInput} placeholder="YYY-MM-DD" value={release_date}onChange={(event) => setReleaseDate(event.target.value)}/>
+                <input type='release_date' className="form-control" style={styles.releaseDateInput} placeholder="YYYY-MM-DD" value={release_date}onChange={(event) => setReleaseDate(event.target.value)}/>
                 <br></br>
                 <label className="text-muted" style={styles.label}>Genre :</label>
                 <input type='genre' className="form-control" style={styles.genreInput} placeholder="Enter genre here." value={genre}onChange={(event) => setGenre(event.target.value)}/>
