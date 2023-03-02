@@ -22,12 +22,20 @@ function App() {
     setSongs([...songs, response.data]);
   }
 
-  async function searchSongs(query) {
+  async function searchSongs(query, filters) {
     const response = await axios.get(`http://127.0.0.1:8000/api/music/`);
     const searchedSongs = response.data.filter(song => {
       const songTitle = song.title.toLowerCase();
       const songArtist = song.artist.toLowerCase();
-      return songTitle.includes(query.toLowerCase()) || songArtist.includes(query.toLowerCase());
+      const songAlbum = song.album.toLowerCase();
+      const songReleaseDate = new Date(song.release_date).toLocaleDateString('en-US');
+      const songGenre = song.genre.toLowerCase();
+  
+      return songTitle.includes(query.toLowerCase()) ||
+             songArtist.includes(query.toLowerCase()) ||
+             songAlbum.includes(query.toLowerCase()) ||
+             songReleaseDate.includes(query.toLowerCase()) ||
+             songGenre.includes(query.toLowerCase());
     });
     console.log(searchedSongs);
     setSongs(searchedSongs);

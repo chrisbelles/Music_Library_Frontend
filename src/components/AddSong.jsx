@@ -56,7 +56,7 @@ const AddSong = (props) => {
         console.log(newEntry)
         props.addSong(newEntry)
           .then(() => {
-            // POST request successful, do nothing
+            window.alert('Song added successfully!');
           })
           .catch((error) => {
             console.log(error);
