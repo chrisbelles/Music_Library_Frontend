@@ -67,6 +67,7 @@ const AddSong = (props) => {
 
     return ( 
         <form onSubmit={handleSubmit} className='form-grid' style={styles.container}>
+            <h2 style={{ textAlign: 'left', marginBottom: '1em' }}>Add a song to Library</h2>
             <div className='form-group' style={{}}>
                 <label className="text-muted" style={styles.label}>Title :</label>
                 <input type='title' className="form-control" style={styles.titleInput} placeholder="Enter title here." value={title}onChange={(event) => setTitle(event.target.value)}/>
